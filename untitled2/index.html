@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dentist</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="/test.js"></script>
+    <style>
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+    </style>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header p-5">
+        <div class="container row-no-padding d-flex ">
+            <div class="logo  start-0">
+                <a href="#">
+                    <img class="logo-image" src="/images/DENTALCARE.png" alt="logo">
+                </a>
+            </div>
+            <nav class="navbar align-middle " >
+                <!-- Navbar content -->
+                <ul class="main-navigation_items w-100">
+
+                    <li class="main-navigation_item">
+                        <a href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li class="main-navigation_item">
+                        <a href="#">
+                            Terapie
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Seervizi
+                        </a>
+                    </li >
+                    <li class="main-navigation_item">
+                        <a href="#">
+                            Chi siamo
+                        </a>
+                    </li>
+                    <li class="main-navigation_item">
+                        <a href="#">
+                            Contatti
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+            <div class="firstbutton">
+                <button class="button p-2">
+                    Prenota
+                </button>
+            </div>
+
+        </div>
+
+    </header>
+    <!-- Header -->
+    <!-- Main -->
+    <main >
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h1 class="main-text__title">
+                        Fai che  il tuo <span class="blue-text">sorriso</span>  sia la curva che raddrizza la tua vita.
+                    </h1>
+                    <p class="main-text_description">
+                        Offriamo servizi dentali di alta qualità con la presenza di esperti di ogni tipologia di trattamento, soddisfando le esigenze di ogni paziente    </p>
+                    <div class=" mt-4 mb-4">
+                        <button class="button " style="height: 3em;width: 15em">
+                            Prenota  ora
+                        </button>
+                    </div>
+                    <div class="row mt-5 align-baseline addres">
+                        <div class="col-6 d-inline-flex m-lg-0">
+                            <div class="img">
+                                <img src="/images/Group%209.png" alt=imgphone">
+                            </div>
+                            <div class="number pt-2 p-lg-2">
+                                <p class="number-text">+39 123 456 789</p>
+                            </div>
+                        </div>
+                        <div class="col-6 d-inline-flex">
+                            <div class="img">
+                                <img src="/images/Group 2.png" alt="imglocation">
+                            </div>
+                            <div class="address pt-1 ps-2">
+                                <p class="address-text"><a href="#" >Via
+                                    Via Roma, 12
+                                    <br>10023 Torino</a> </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="main-image col-5 position-relative me-lg-5">
+                    <img class="main-image__doc" src="/images/Progetto senza titolo (19) 1.png" alt="doctor">
+                    <img class="retangle" src="/images/Rectangle%20107.png" alt="retangle">
+                </div>
+            </div>
+
+        </div>
+       
+
+    </main>
+    <!-- Main -->
+    <!-- Services  -->
+    <section class="services text-center ">
+            <div class="container col">
+                <div class="services-title p-5 ">
+                    <h2 class="title2">I NOSTRI SERVIZI </h2>
+                    <div  >
+                        <h1 class="main-text__title">La Nostra Lista Di Trattamenti </h1>
+                    </div>
+                </div>
+                <div class="services-items row  d-flex justify-content-around pt-5 ">
+                    <div class="services-item col-4 bg-light text-center border-info  " style="width: 18em; height: 18em;">
+                        <div class="services-item_image card-img-top mt-3">
+                            <img src="/images/Frame%204.png" alt="imgservice">
+                        </div>
+                        <div class="services-item_text card-body">
+                            <h3 class="services-item_title card-title">Trattamenti di Endodonzia</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+
+                        </div>
+                    </div>
+                    <div class="services-item col-4 text-center bg-light  border-info border"  style="width: 18em; height: 18em;">
+                        <div class="services-item_image card-img-top mt-3">
+                            <img src="/images/Frame%206.png" alt="imgservice">
+                        </div>
+                        <div class="services-item_text card-body">
+                            <h3 class="services-item_title card-title">Trattamenti di Endodonzia</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+
+                        </div>
+                    </div>
+                    <div class="services-item col-4 text-center border bg-light border-info "  style="width: 18em; height: 18em;">
+                        <div class="services-item_image card-img-top mt-3">
+                            <img src="/images/Frame%208.png" alt="imgservice">
+                        </div>
+                        <div class="services-item_text card-body">
+                            <h3 class="services-item_title card-title">Trattamenti di Endodonzia</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center p-5 btn ">
+                        <button class="button" style="height: 3em;width: 15em">
+                            Scopri di più
+                        </button>
+                    </div>
+            </div>
+
+    </section>
+    <!-- Services  -->
+    <!-- About -->
+    <section class="about d-flex pb-5">
+        <div class="container d-flex ">
+            <div class="about-text col-5">
+                <div class="about-text__title">
+                    <span class="title2 text-uppercase">Domande frequenti</span>
+                    <h1 class="main-text__title">Chi siamo</h1>
+                </div>
+                <div class="about-text_description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, adipisci, alias, aliquid atque autem
+                    beatae commodi consequatur cumque cupiditate delectus deleniti dolor doloremque dolorum ea eius enim eos
+                    est et eum ex exercitationem expedita explicabo facilis fuga fugiat hic id illum
+                </div>
+                <div class="about-time d-flex mt-4">
+                    <div class="about-time__image">
+                        <img src="/images/Frame%209.png" alt="clock">
+                    </div>
+                    <div class="about-time__text ps-4">
+                        <h3>Orari completi per tutti </h3>
+                        <p class="ptext">I Centri DentalPro sono aperti dalle 9 di mattina fino alle 20 con orario continuato.</p>
+                    </div>
+
+                </div>
+                <div class="about-table d-flex">
+                    <div class="about-table__image">
+                        <img src="/images/Frame%2010.png" alt="terms">
+                    </div>
+                    <div class="about-table__text ps-4">
+                        <h3>Dilazioni di pagamento</h3>
+                        <p>DentalCare offre un piano  La salute del paziente deve essere sempre il nostro primo obiettivo.</p>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="about-image col-6 ">
+                <img class="nurse-image" src="/images/Progetto senza titolo (17) 1.png" alt="doctor">
+                <img class="retangle2" src="/images/Rectangle 107.png" alt="retngle">
+            </div>
+        </div>
+       
+
+    </section>
+    <!-- About -->
+    <!-- Statistics -->
+    <section class="statistics pt-5">
+        <div class="container">
+            <div class="statistics-cards row ">
+
+                <div class="statistics-card  col-2">
+                    <h1>1783+</h1>
+                    <span>Pazienti felici</span>
+                </div>
+                <div class="statistics-card  col-2" >
+                    <h1>730+</h1>
+                    <span>Appuntamenti online </span>
+                </div>
+                <div class="statistics-card  col-2">
+                    <h1>15+</h1>
+                    <span>Premi ottenuti </span>
+                </div>
+                <div class="statistics-card  col-2">
+                    <h1>7+</h1>
+                    <span>Pazienti felici</span>
+                </div>
+        </div>
+
+
+        </div>
+    </section>
+    <!-- Statistics -->
+    <!-- Doctors -->
+    <section class="doctors">
+        <div class="container">
+            <div class="doctors-title text-center">
+                <h2 class="title2">Lo Staff</h2>
+                <div>
+                    <h1 class="main-text__title">Incontra i nostri specialisti </h1>
+                </div>
+            </div>
+            <div class="doctors-items row pt-5 justify-content-between">
+                <div class="doctors-item col-2">
+                    <div class="doctors-item_image">
+                        <img src="/images/Frame%2011.png" alt="doctor">
+                    </div>
+                    <div class="doctors-item_text">
+                        <h3>Dr. John Doe</h3>
+                        <p>Chirurgo dentale </p>
+                    </div>
+                </div>
+                <div class="doctors-item col-2">
+                    <div class="doctors-item_image">
+                        <img src="/images/Frame%2012.png" alt="doctor">
+                    </div>
+                    <div class="doctors-item_text">
+                        <h3>Martina Gallo</h3>
+                        <p>Assistente</p>
+                    </div>
+                </div>
+                <div class="doctors-item col-2">
+                    <div class="doctors-item_image">
+                        <img src="/images/Frame%2013.png" alt="doctor">
+                    </div>
+                    <div class="doctors-item_text">
+                        <h3>Luca Ferrero</h3>
+                        <p>Igienista  dentale  </p>
+                    </div>
+                </div>
+                <div class="doctors-item col-2">
+                    <div class="doctors-item_image">
+                        <img src="/images/Frame%2015.png" alt="doctor">
+                    </div>
+                    <div class="doctors-item_text">
+                        <h3>Giulia Santi</h3>
+                        <p>Odontotecnico </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Doctors -->
+    <!-- Questions-->
+    <section class="questions">
+        <div class="container">
+            <div class="questions-title text-center">
+
+                <h2 class="title2">Recensioni</h2>
+                <div >
+                    <h1 class="main-text__title">Recensioni dei nostri pazienti</h1>
+                </div>
+            </div>
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Collapsible Group Item #1
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Collapsible Group Item #2
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Collapsible Group Item #3
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+    </section>
+    <!-- Questions-->
+    <!-- Reviews -->
+    <section class="reviews">
+        <div class="container">
+            <div class="reviews-title text-center">
+                <h2 class="title2">Recensioni</h2>
+                <div class="mt-5 mb-5">
+                    <h1 class="main-text__title">Recensioni dei nostri pazienti</h1>
+                </div>
+            </div>
+            <div class="reviews-items row justify-content-between">
+                <div class="reviews-item col-3">
+                    <div class="reviews-item_image">
+                        <img src="/images/Ellipse%2022.png" alt="doctor">
+                    </div>
+                    <div class="reviews-item_text">
+                        <h3>Giulia Santi</h3>
+                        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, aspernatur?
+                    </h6>
+                        <img src="/images/Frame 3.png" alt="">
+                    </div>
+                </div>
+                <div class="reviews-item col-3">
+                    <div class="reviews-item_image">
+                        <img src="/images/Ellipse%2023.png" alt="doctor">
+                    </div>
+                    <div class="reviews-item_text">
+                        <h3>Giulia Santi</h3>
+                        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, aspernatur?
+                    </h6>
+                        <img src="/images/Frame 3.png" alt="">
+                    </div>
+                </div>
+                <div class="reviews-item col-3">
+                    <div class="reviews-item_image">
+                        <img src="/images/Ellipse%2024.png" alt="doctor">
+                    </div>
+                    <div class="reviews-item_text">
+                        <h3>Giulia Santi</h3>
+                        <h6>Lorem ipsum dolor sit amet . Alias, aspernatur?
+                        </h6>
+                        <img src="/images/Frame 3.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Reviews -->
+    <!-- Footer -->
+    <footer class="footer ">
+        <div class="container">
+            <div class="footer-subscribe">
+                <div class="footer-subscribe_text">
+                    <h4 class="title2">Iscriviti alla nostra Newsletterr</h4>
+
+                </div>
+                <div class="footer-subscribe_form">
+                    <input type="text" placeholder="Enter your email">
+                    <button class="subscribe">Iscriviti</button>
+                </div>
+
+            </div>
+            <div class="footer-info row justify-content-around">
+                <div class="footer-info__social  col-3">
+                    <img src="/images/DENTALCARE.png" alt="logo">
+                    <p>Offriamo servizi di qualitò con personale qualificato con più 5 anni di esperienza </p>
+                    <div class="footer-info__social_icons">
+                        <a href="#"><img src="/images/instagram.png" alt="instagram"></a>
+                        <a href="#"><img src="/images/facebook.png" alt="facebook"></a>
+                        <a href="#"><img src="/images/twitter.png" alt="twitter"></a>
+                    </div>
+                </div>
+                <div class="footer-info__links col-3">
+                    <h2>Links</h2>
+                    <ul class="support-link">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="support col-3">
+                    <h2>Support</h2>
+                    <ul class="support-link">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-info_text col-3">
+                    <h2>Contattaci</h2>
+                    <p>Telefono: 1234567890</p>
+                    <p>Email:info@dentalpro.com</p>
+                    <p>Indirizzo: Via Roma, 123</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- Footer -->
+
+                
+
+        
+        
+       
+     
+<!--   <script src="/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>-->
+<!--    <script>-->
+<!--        let acc = document.getElementsByClassName("accordion");-->
+<!--        let i;-->
+
+<!--        for (i = 0; i < acc.length; i++) {-->
+<!--            acc[i].addEventListener("click", function() {-->
+<!--                this.classList.toggle("active");-->
+<!--                let panel = this.nextElementSibling;-->
+<!--                if (panel.style.display === "block") {-->
+<!--                    panel.style.display = "none";-->
+<!--                } else {-->
+<!--                    panel.style.display = "block";-->
+<!--                }-->
+<!--            });-->
+<!--        }-->
+<!--    </script>-->
+
+</body>
+</html>
