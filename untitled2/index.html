@@ -5,33 +5,9 @@
     <title>Dentist</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="/test.js"></script>
-    <style>
-        .panel {
-            padding: 0 18px;
-            background-color: white;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-        }
-    </style>
 
-    <script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-            });
-        }
-    </script>
 
 
 </head>
@@ -312,57 +288,38 @@
     <!-- Questions-->
     <section class="questions">
         <div class="container">
-            <div class="questions-title text-center">
+                <div class="faq">
+                    <div class="faq-item">
+                        <input type="checkbox" id="q1" class="faq-input">
+                        <label for="q1" class="faq-title">Come funziona DentalPro?</label>
+                        <div class="faq-text">
+                            <p>Il nostro sito web è stato progettato per essere semplice e intuitivo. Puoi prenotare un appuntamento online in pochi secondi. Se hai bisogno di ulteriori informazioni, puoi contattarci tramite il nostro modulo di contatto o chiamarci al numero 123-456-7890.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="q2" class="faq-input">
+                        <label for="q2" class="faq-title">Come posso prenotare un appuntamento?</label>
+                        <div class="faq-text">
+                            <p>Il nostro sito web è stato progettato per essere semplice e intuitivo. Puoi prenotare un appuntamento online in pochi secondi. Se hai bisogno di ulteriori informazioni, puoi contattarci tramite il nostro modulo di contatto o chiamarci al numero 123-456-7890.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="q3" class="faq-input">
+                        <label for="q3" class="faq-title">Come posso prenotare un appuntamento?</label>
+                        <div class="faq-text">
+                            <p>Il nostro sito web è stato progettato per essere semplice e intuitivo. Puoi prenotare un appuntamento online in pochi secondi. Se hai bisogno di ulteriori informazioni, puoi contattarci tramite il nostro modulo di contatto o chiamarci al numero 123-456-7890.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <input type="checkbox" id="q4" class="faq-input">
+                        <label for="q4" class="faq-title">Come posso prenotare un appuntamento?</label>
+                        <div class="faq-text">
+                            <p>Il nostro sito web è stato progettato per essere semplice e intuitivo. Puoi prenotare un appuntamento online in pochi secondi. Se hai bisogno di ulteriori informazioni, puoi contattarci tramite il nostro modulo di contatto o chiamarci al numero 123-456-7890.</p>
+                        </div>
+                    </div>
 
-                <h2 class="title2">Recensioni</h2>
-                <div >
-                    <h1 class="main-text__title">Recensioni dei nostri pazienti</h1>
                 </div>
-            </div>
-            <div class="accordion" id="accordionExample">
-                <div class="card">
-                    <div class="card-header" id="headingOne">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Collapsible Group Item #1
-                            </button>
-                        </h2>
-                    </div>
-
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingTwo">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Collapsible Group Item #2
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                        <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingThree">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Collapsible Group Item #3
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                        <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                    </div>
-                </div>
+             
             </div>
 
 
@@ -480,23 +437,9 @@
         
        
      
-<!--   <script src="/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>-->
-<!--    <script>-->
-<!--        let acc = document.getElementsByClassName("accordion");-->
-<!--        let i;-->
+  <script src="/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
 
-<!--        for (i = 0; i < acc.length; i++) {-->
-<!--            acc[i].addEventListener("click", function() {-->
-<!--                this.classList.toggle("active");-->
-<!--                let panel = this.nextElementSibling;-->
-<!--                if (panel.style.display === "block") {-->
-<!--                    panel.style.display = "none";-->
-<!--                } else {-->
-<!--                    panel.style.display = "block";-->
-<!--                }-->
-<!--            });-->
-<!--        }-->
-<!--    </script>-->
+
 
 </body>
 </html>

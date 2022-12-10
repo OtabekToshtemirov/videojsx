@@ -436,3 +436,53 @@ main, .about,.statistics,.doctors,.questions,.reviews,.footer{
     line-height: 27px;
 
   }
+  /* Question collapse */
+  *:before,*:after{
+    box-sizing: border-box;
+  }
+  .faq{
+    max-width: 70%;
+    /*margin:20px auto;*/
+
+  }
+  .faq-title{
+    color: #0f2650;
+    display: block;
+    cursor: pointer;
+    transition: bacground 0.3s;
+  }
+  .faq-item{
+
+    margin-bottom: 5px;
+    border: 1px solid #01CFC9;
+    border-radius: 25px;
+    padding: 10px 15px;
+  }
+  .faq-input{
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+  }
+  .faq-text{
+    display: none;
+    padding: 10px 15px;
+
+    
+  }
+  .faq-title{
+    display: block;
+    padding: 10px 15px;
+    background: #eefbfa;
+    border-radius: 25px;
+  }
+  .faq-title:hover{
+    background: #01CFC9;
+    border-radius: 25px;
+  }
+  .faq-input:checked ~ .faq-text{
+    display: block;
+  }
+
+
