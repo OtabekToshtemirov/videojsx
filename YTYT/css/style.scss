@@ -1,0 +1,626 @@
+$buttonColor: #F15525;
+$buttonColorHover: #38BFF2;
+$backgroundColor: #EAF2F5;
+
+.container{
+  width: 68.23rem;
+  margin: 0 auto;
+}
+@mixin title($color){
+  color: $color;
+  font-size: 2em;
+  font-weight: normal;
+  font-family: 'Gilroy SemiBold', Serif, serif;
+}
+@mixin btn($width,$height,$fontSize){
+  background-color: $buttonColor;
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+  width:$width ;
+  height:$height ;
+  font-size: 18px;
+  border-radius: 82px;
+  justify-content: center;
+  align-items: center;
+  left: 438px;
+  top: 218px;
+  transition: 0.5s ease;
+
+  &:hover{
+    background-color: $buttonColorHover;
+  }
+}
+body{
+  background:  url("/images/eclips1.png") no-repeat  top,url("/images/eclipps.png") center no-repeat,#FAFAFA;
+
+}
+
+//Header
+
+
+.header{
+
+
+  .navigation-bar{
+    display: flex;
+    height: 3em;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 1em;
+    background-color:white;
+    border-radius: 75px;
+
+    //margin: 2em 0;
+    .registration a{
+      text-decoration: none;
+      color: #000;
+      font-size: 13px;
+      font-family: 'Gilroy', sans-serif;
+      padding-right:1em ;
+      &:hover{
+        color: $buttonColor;
+        transition: 0.3s ease;
+      }
+    }
+    button{
+      @include btn(5rem, 2.1rem,0.8rem);
+      font-size: 0.5rem;
+      font-weight: normal;
+
+    }
+    li{
+      list-style: none;
+      margin-right: 20px;
+      display: inline-block;
+      a{
+        text-decoration: none;
+        color: #000;
+        font-size: 13px;
+        font-family: 'Gilroy', sans-serif;
+        &:hover{
+          color: $buttonColor;
+          transition: 0.3s ease;
+        }
+      }
+    }
+
+  }
+  .menu{
+    padding: 0.5em;
+    padding-right: 3rem;
+    margin-right: 15rem;
+  ;
+
+  }
+  .main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+
+    h1{
+      @include title(#000);
+      font-size: 2.3rem;
+      font-weight: bold;
+      font-family: 'Gilroy SemiBold', Serif, serif;
+      margin-right: 1em;
+    }
+    p{
+      font-family: 'Gilroy', serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 0.8rem;
+      line-height: 23px;
+      
+
+
+      color: #22253B;
+    }
+    span{
+      font-weight: normal;
+      font-size: 3rem;
+      color: $buttonColor;
+    }
+    .main-header__image{
+      margin-top: 3rem;
+    }
+    .main-header__text{
+      width: 50%;
+      h1{
+        @include title(#000);
+        font-size: 3em;
+        margin-bottom: 0.5em;
+      }
+      p{
+        font-size: 1.2em;
+        font-family: 'Gilroy', sans-serif;
+        color: #000;
+        margin-bottom: 1em;
+      }
+
+    }
+    button{
+      @include btn(22rem,3.5rem,18px);
+      font-weight: normal;
+    }
+  }
+
+}
+
+//Main info
+main{
+  background: #ffffff;
+  .header{
+
+  }
+  .title{
+    @include title(#000);
+    text-align: center;
+    //justify-content: center;
+    font-weight: bolder;
+    color: #22253B;
+    font-size: 2.7rem;
+  }
+  .colorful{
+    padding: 0.8rem 2rem;
+    display: inline-block;
+    background-color: $buttonColor;
+    border: none;
+    margin: 0.5rem;
+    border-radius:44px ;
+    color: #fff;
+    font-family: "Gilroy SemiBold", Serif, serif;
+  }
+  .main-info{
+
+    display: flex;
+    background-color: $backgroundColor;
+    justify-content:space-evenly;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 3rem;
+    .main-info__text{
+      padding-top: 4rem;
+    }
+    span{
+      font-family: 'Gilroy SemiBold', serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 25px;
+      color: #22253B;
+      padding-top: 1rem;
+
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+//Main info
+
+
+
+// About
+.about{
+  padding-bottom: 3rem;
+  width: 100%;
+  background-color: #fff;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  .about-title{
+    @include title(#22253B);
+    display: flex;
+    justify-content: center;
+  }
+  .about-cards{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: center;
+    grid-gap: 27px;
+    gap: 27px;
+    .about-card{
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: flex-start;
+      padding:1.8rem;
+      width: 12rem;
+      height: 10rem;
+      text-align: center;
+      background-color: #eaf2f5;
+      border-radius: 30px;
+      h3{
+        font-family: 'Gilroy SemiBold', serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 18px;
+        margin: 0.5rem;
+      }
+      p{
+        font-family: 'Gilroy', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+      }
+    }
+    }
+  }
+
+//About end
+
+
+// Presentation
+
+.presentation{
+  .presentation-video{
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    background: url("/images/💻  Macbook.png")  no-repeat center;
+  }
+  .start-education{
+    margin-left: 18rem;
+    margin-top: 2rem;
+    display: flex;
+    width: 31.8rem;
+    height: 5.47rem;
+    border-radius: 110px;
+    border: none;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ffffff;
+    text-align: center;
+    button{
+      @include btn(13rem,4rem,1.9rem)
+    }
+    .text{
+      width: 15rem;
+      font-family: 'Manrope', serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      color: #22253B;
+    }
+  }
+  padding-bottom: 5rem;
+  padding-top: 3rem;
+  .presentation-info{
+    .vertical-line{
+      border-right: 1px solid#EAF2F5;
+      margin-top: 4rem;
+      height: 15rem;
+      vertical-align: center;
+
+    }
+    width: 100%;
+    height: 22rem;
+    background-color: #ffffff;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-around;
+    .big-number{
+      font-family: 'Gilroy', serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 77px;
+      line-height: 30px;
+      display: flex;
+      align-items: center;
+
+      color: #38BFF2;
+
+    }
+    .presentation-card{
+      width: 15rem;
+      h3{
+        font-family: 'Gilroy SemiBold', serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.3rem;
+        line-height: 30px;
+        color: #22253B;
+      }
+      p{
+        font-family: 'Gilroy', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.3rem;
+
+        color: #22253B;
+      }
+    }
+  }
+  .presentation-head{
+    text-align: center;
+  }
+  .presentation-title{
+    justify-content: center;
+    text-align: center;
+    h5{
+      padding-left: 15rem;
+      display: flex;
+      justify-content: center;
+      width: 37rem;
+      font-family: 'Gilroy', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  .title{
+    @include title(#22253B);
+    font-size: 2.7rem;
+    font-weight: 600;
+  }
+
+}
+//Presentation end
+//Support
+.support{
+  background: #fff;
+  .support-cards{
+    img{
+      width: 15rem;
+      height: 12rem;
+    }
+
+    .support-card{
+      h3{
+        font-family: 'Gilroy SemiBold', serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.9rem;
+        line-height: 30px;
+        color: #22253B;
+      }
+      p{
+        font-family: 'Gilroy', serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 25px;
+        color: #22253B;
+        margin-top: 0;
+      }
+      display: flex;
+      height: 13rem;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3rem;
+      text-align: center;
+      background-color: #eaf2f5;
+      border-radius: 30px;
+    }
+    display: flex;
+    flex-flow: row wrap;
+    align-items:center;
+    justify-content:space-between;
+    grid-gap: 2rem;
+    gap: 2rem;
+
+  }
+  .support-card__text{
+     width: 37rem;
+    text-align: start;
+   }
+}
+.background{
+  width: 100%;
+  padding: 3rem 0;
+  background-color: #fff;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+
+}
+
+//Support end
+
+
+//Price course
+
+.price-courses{
+  .reminder{
+    .button{
+      @include btn(18rem,4.2rem,1.3rem)
+    }
+    p{
+      font-family: 'Gilroy', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.3rem;
+      color: #22253B;
+    }
+    .reminder-text{
+      width: 35rem;
+    }
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 12rem;
+    border: none;
+    border-radius: 30px;
+    background:  #EAF2F5;
+  }
+  .price-courses__table{
+    background: #ffffff;
+    border: none;
+    border-radius:30px ;
+
+    width: 100%;
+    table{
+      border-spacing: 0;
+      tbody{
+        width: 100%;
+      }
+    }
+    .table-box{
+      width: 80%;
+
+      display: flex;
+      flex-flow: row nowrap;
+      border-radius: 10px;
+    }
+    .table-box:nth-child(even){
+      background-color: #f2f2f2;
+      border-radius: 10px;
+    }
+      td{
+        font-family: 'Gilroy', serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 25px;
+        color: #22253B;
+        padding: 1rem 1.1rem 0.9rem;
+        collapse: none;
+        width: 46%;
+      }
+
+      .blue-letter{
+        font-family: 'Gilroy',serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        color: #38BFF2;
+      }
+
+
+
+  }
+  .price-courses__cards{
+    h1{
+      text-align: center;
+    }
+  }
+  .price-cards{
+    .price-card{
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+    img{
+      margin-right: 1rem;
+    }
+    p{
+      font-family: 'Gilroy', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.9rem;
+      line-height: 1.3rem;
+      color: #22253B;
+    }
+    display: grid;
+    grid-template-columns: minmax(auto,391px) minmax(auto,252px) minmax(auto,380px);
+    margin-bottom: 30px;
+    grid-column-gap: 69px;
+    column-gap: 69px;
+  }
+
+  .title{
+    @include title( #22253B);
+    font-weight: 600;
+  }
+}
+// Footer
+
+.footer-logo{
+  // .social-media{
+    a{
+      font-size: 2rem;
+      margin: 1rem;
+    }
+  // }
+
+  p{
+    font-family: 'Gilroy', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 19px;
+    color: #8E8E8E;
+    margin-left: 1rem;
+  }
+  img{
+    height: 1.3rem;
+  }
+  width: 35rem;
+  justify-content: start;
+  align-items: center;
+  display: flex;
+}
+.privacy{
+  a{
+    font-family: 'Gilroy', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 4rem;
+    color: #8E8E8E;
+  }
+  p{
+
+    font-family: 'Gilroy', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 4rem;
+    color: #8E8E8E;
+  }
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer{
+
+  .left{
+    margin-left: 10rem;
+  }
+  .contacts{
+    p{
+      font-family: 'Gilroy', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 23px;
+      color: #8E8E8E;
+    }
+  }
+  .info-course{
+    line-height: 2rem;
+  }
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  margin-top: 3rem;
+  li{
+    list-style: none;
+    margin-right: 20px;
+    a{
+      text-decoration: none;
+      color: #000;
+      line-height: 1.4rem;
+      font-size: 13px;
+      font-family: 'Gilroy', sans-serif;
+      &:hover{
+        color: $buttonColor;
+        transition: 0.3s ease;
+      }
+    }
+  }
+}
+
+
+
+
