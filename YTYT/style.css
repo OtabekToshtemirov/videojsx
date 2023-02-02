@@ -1,0 +1,1000 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Gilroy", sans-serif;
+}
+
+.toggle {
+  display: none;
+}
+
+.container {
+  width: 68.23rem;
+  margin: 0 auto;
+}
+
+body {
+  background: url("../images/eclipps.png") center no-repeat, url("../images/eclips1.png") top no-repeat, #FAFAFA;
+  width: 100%;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.header {
+  margin-bottom: 0;
+  padding-top: 1rem;
+}
+
+.navigation-bar {
+  display: flex;
+  height: 3em;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  background-color: white;
+  border-radius: 75px;
+}
+.navigation-bar .logo {
+  padding-right: 2rem;
+}
+.navigation-bar .registration a {
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+  font-family: "Gilroy", sans-serif;
+  padding-right: 1em;
+}
+.navigation-bar .registration a:hover {
+  color: #F15525;
+  transition: 0.3s ease;
+}
+.navigation-bar button {
+  background-color: #F15525;
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+  width: 5rem;
+  height: 2.1rem;
+  font-size: 18px;
+  border-radius: 82px;
+  justify-content: center;
+  align-items: center;
+  left: 438px;
+  top: 218px;
+  transition: 0.5s ease;
+  font-size: 0.5rem;
+  font-weight: normal;
+}
+.navigation-bar button:hover {
+  background-color: #38BFF2;
+}
+.navigation-bar li {
+  list-style: none;
+  margin-right: 20px;
+  display: inline-block;
+}
+.navigation-bar li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+  font-family: "Gilroy", sans-serif;
+}
+.navigation-bar li a:hover {
+  color: #F15525;
+  transition: 0.3s ease;
+}
+
+.menu {
+  flex: 1 1 auto;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+}
+.main-header h1 {
+  color: #000;
+  font-size: 2em;
+  font-weight: normal;
+  font-family: "Gilroy SemiBold", Serif, serif;
+  font-size: 2.3rem;
+  font-weight: bold;
+  font-family: "Gilroy SemiBold", Serif, serif;
+  margin-right: 1em;
+}
+.main-header p {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.8rem;
+  line-height: 23px;
+  padding: 1rem 0;
+  color: #22253B;
+}
+.main-header span {
+  font-weight: normal;
+  font-size: 3rem;
+  color: #F15525;
+}
+.main-header .main-header__image {
+  margin-top: 3rem;
+}
+.main-header .main-header__text {
+  width: 50%;
+}
+.main-header .main-header__text a {
+  font-size: 1rem;
+  color: #ffffff;
+}
+.main-header .main-header__text h1 {
+  color: #000;
+  font-size: 2em;
+  font-weight: normal;
+  font-family: "Gilroy SemiBold", Serif, serif;
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+.main-header .main-header__text p {
+  font-size: 1.2em;
+  font-family: "Gilroy", sans-serif;
+  color: #000;
+}
+.main-header button {
+  background-color: #F15525;
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+  width: 22rem;
+  height: 3.5rem;
+  font-size: 18px;
+  border-radius: 82px;
+  justify-content: center;
+  align-items: center;
+  left: 438px;
+  top: 218px;
+  transition: 0.5s ease;
+  font-weight: normal;
+}
+.main-header button:hover {
+  background-color: #38BFF2;
+}
+
+main {
+  background: #ffffff;
+}
+main .title {
+  color: #000;
+  font-size: 2em;
+  font-weight: normal;
+  font-family: "Gilroy SemiBold", Serif, serif;
+  text-align: center;
+  font-weight: bolder;
+  color: #22253B;
+  font-size: 2.7rem;
+  margin-top: 0;
+  padding: 1rem;
+}
+main .colorful {
+  padding: 0.8rem 2rem;
+  display: inline-block;
+  background-color: #F15525;
+  border: none;
+  margin: 0.3rem;
+  border-radius: 44px;
+  color: #fff;
+  font-family: "Gilroy SemiBold", Serif, serif;
+}
+main .main-info {
+  display: flex;
+  background-color: #EAF2F5;
+  justify-content: space-evenly;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 3rem;
+}
+main .main-info .main-info__text {
+  padding-top: 4rem;
+  width: 50%;
+}
+@media only screen and (max-width: 768px) {
+  main .main-info .main-info__text {
+    width: 600px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+main .main-info span {
+  font-family: "Gilroy SemiBold", serif;
+  font-weight: 400;
+  line-height: 25px;
+  color: #22253B;
+  padding-top: 1rem;
+}
+main .main-info img {
+  width: 100%;
+  height: 100%;
+}
+
+.about {
+  padding-bottom: 3rem;
+  width: 100%;
+  background-color: #fff;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+}
+.about .about-title {
+  color: #22253B;
+  font-size: 2em;
+  font-weight: normal;
+  font-family: "Gilroy SemiBold", Serif, serif;
+  display: flex;
+  padding: 1rem 0;
+  justify-content: center;
+}
+.about .about-cards {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+  grid-gap: 27px;
+  gap: 27px;
+}
+.about .about-cards .about-card {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.8rem;
+  width: 12rem;
+  height: 10rem;
+  text-align: center;
+  background-color: #eaf2f5;
+  border-radius: 30px;
+}
+.about .about-cards .about-card h3 {
+  font-family: "Gilroy SemiBold", serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0.5rem;
+}
+.about .about-cards .about-card p {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.presentation {
+  padding-bottom: 5rem;
+  padding-top: 3rem;
+}
+.presentation .presentation-video {
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  background: url("/images/💻  Macbook.png") no-repeat center;
+}
+.presentation .presentation-video video {
+  margin-top: 2rem;
+}
+.presentation .start-education {
+  margin: 2rem auto;
+  display: flex;
+  width: 31.8rem;
+  height: 5.47rem;
+  border-radius: 110px;
+  border: none;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ffffff;
+  text-align: center;
+}
+.presentation .start-education button {
+  background-color: #F15525;
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+  width: 13rem;
+  height: 4rem;
+  font-size: 18px;
+  border-radius: 82px;
+  justify-content: center;
+  align-items: center;
+  left: 438px;
+  top: 218px;
+  transition: 0.5s ease;
+}
+.presentation .start-education button:hover {
+  background-color: #38BFF2;
+}
+.presentation .start-education .text {
+  width: 15rem;
+  font-family: "Manrope", serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #22253B;
+}
+.presentation .presentation-info {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+.presentation .presentation-info .vertical-line {
+  border-right: 1px solid #EAF2F5;
+  margin-top: 4rem;
+  height: 15rem;
+  vertical-align: center;
+}
+@media only screen and (width: 768px) {
+  .presentation .presentation-info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.presentation .presentation-info .big-number {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 77px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  color: #38BFF2;
+}
+.presentation .presentation-info .presentation-card {
+  width: 16rem;
+  margin-top: 3rem;
+  padding: 2rem 3rem;
+}
+@media only screen and (width: 768px) {
+  .presentation .presentation-info .presentation-card {
+    width: 20rem;
+  }
+}
+.presentation .presentation-info .presentation-card h3 {
+  font-family: "Gilroy SemiBold", serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 30px;
+  color: #22253B;
+  padding: 1.5rem 0;
+}
+.presentation .presentation-info .presentation-card p {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  color: #22253B;
+}
+.presentation .presentation-head {
+  text-align: center;
+}
+.presentation .presentation-title {
+  justify-content: center;
+  text-align: center;
+}
+.presentation .presentation-title h5 {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  width: 37rem;
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+.presentation .title {
+  color: #22253B;
+  font-size: 2em;
+  font-weight: normal;
+  font-family: "Gilroy SemiBold", Serif, serif;
+  font-size: 2.7rem;
+  font-weight: 600;
+}
+
+.support {
+  background: #fff;
+}
+.support .support-cards {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 2rem;
+  gap: 2rem;
+}
+.support .support-cards img {
+  width: 15rem;
+  height: 12rem;
+}
+.support .support-cards .support-card {
+  display: flex;
+  height: 13rem;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+  text-align: center;
+  background-color: #eaf2f5;
+  border-radius: 30px;
+}
+.support .support-cards .support-card h3 {
+  font-family: "Gilroy SemiBold", serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.9rem;
+  line-height: 30px;
+  color: #22253B;
+}
+.support .support-cards .support-card p {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 25px;
+  color: #22253B;
+  margin-top: 0;
+}
+.support .support-card__text {
+  width: 37rem;
+  text-align: start;
+}
+
+.background {
+  width: 100%;
+  padding: 3rem 0;
+  background-color: #fff;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+}
+
+.price-courses .reminder {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 30px;
+  background: #EAF2F5;
+  padding: 2rem 0;
+}
+.price-courses .reminder button {
+  background-color: #F15525;
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+  width: 18rem;
+  height: 4.2rem;
+  font-size: 18px;
+  border-radius: 82px;
+  justify-content: center;
+  align-items: center;
+  left: 438px;
+  top: 218px;
+  transition: 0.5s ease;
+}
+.price-courses .reminder button i {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+.price-courses .reminder button:hover {
+  background-color: #38BFF2;
+}
+.price-courses .reminder p {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  color: #22253B;
+}
+.price-courses .reminder .reminder-text {
+  width: 550px;
+}
+.price-courses .price-courses__table {
+  background: #ffffff;
+  border: none;
+  border-radius: 30px;
+  width: 100%;
+}
+.price-courses .price-courses__table tr {
+  border-radius: 10px;
+}
+.price-courses .price-courses__table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.price-courses .price-courses__table .table-box {
+  display: flex;
+  flex-flow: row nowrap;
+  border-radius: 10px;
+  margin: 0 3rem;
+}
+.price-courses .price-courses__table .table-box:nth-child(even) {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+.price-courses .price-courses__table td {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #22253B;
+  padding: 1rem 1.1rem 0.9rem;
+  collapse: none;
+  width: 46%;
+}
+.price-courses .price-courses__table .blue-letter {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #38BFF2;
+}
+.price-courses .paddingText {
+  padding: 1rem 0;
+}
+.price-courses .price-courses__cards .table-box {
+  display: flex;
+  justify-content: space-between;
+}
+.price-courses .price-courses__cards th {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  padding: 1rem 1.1rem 0.9rem;
+  background-color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  border: none;
+}
+.price-courses .price-courses__cards h1 {
+  text-align: center;
+}
+.price-courses .price-cards {
+  display: grid;
+  grid-template-columns: minmax(auto, 391px) minmax(auto, 252px) minmax(auto, 380px);
+  margin-bottom: 30px;
+  grid-column-gap: 69px;
+  column-gap: 69px;
+}
+.price-courses .price-cards .price-card {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.price-courses .price-cards img {
+  margin-right: 1rem;
+}
+.price-courses .price-cards p {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  color: #22253B;
+}
+@media only screen and (max-width: 768px) {
+  .price-courses .price-cards {
+    display: block;
+  }
+}
+
+.title {
+  color: #22253B;
+  font-size: 2em;
+  font-weight: normal;
+  font-family: "Gilroy SemiBold", Serif, serif;
+  font-weight: 600;
+}
+
+.price-course h1 {
+  padding: 1rem 0;
+}
+
+.footer-logo {
+  width: 35rem;
+  justify-content: start;
+  align-items: center;
+}
+.footer-logo .icons {
+  margin-top: 2rem;
+}
+.footer-logo .icons a {
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0.5rem;
+  color: #22253B;
+}
+.footer-logo .icons a:hover {
+  color: #F15525;
+}
+.footer-logo span {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 19px;
+  color: #8E8E8E;
+  margin-left: 1rem;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+.footer-logo img {
+  height: 1.9rem;
+}
+
+.privacy {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.privacy a {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 4rem;
+  color: #8E8E8E;
+}
+.privacy p {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 4rem;
+  color: #8E8E8E;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  margin-top: 3rem;
+}
+.footer .left {
+  margin-left: 10rem;
+}
+.footer .contacts p {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 23px;
+  color: #8E8E8E;
+}
+.footer .info-course {
+  line-height: 2rem;
+  margin: 0 5rem;
+}
+.footer li {
+  list-style: none;
+  margin-right: 20px;
+}
+.footer li a {
+  text-decoration: none;
+  color: #000;
+  line-height: 1.4rem;
+  font-size: 13px;
+  font-family: "Gilroy", sans-serif;
+}
+.footer li a:hover {
+  color: #F15525;
+  transition: 0.3s ease;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 600px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-logo {
+    width: auto;
+  }
+
+  .info-course {
+    margin: 1rem 0;
+  }
+
+  .price-card {
+    margin: 1rem;
+  }
+
+  .reminder {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .reminder-text {
+    margin: 1rem;
+  }
+
+  .main-header {
+    margin-top: 50px;
+  }
+
+  .toggle {
+    display: block;
+  }
+
+  .header .navigation-bar li {
+    display: block;
+    margin: 10px 0;
+    font-size: 32px;
+    font-family: "Gilroy", sans-serif;
+  }
+
+  .header .navigation-bar a {
+    font-size: 32px;
+  }
+
+  .main-header {
+    display: block;
+    height: auto;
+  }
+
+  .main-header__text {
+    text-align: center;
+  }
+
+  .main-header, .main-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-info__image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .presentation-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .vertical-line {
+    width: 80%;
+    border: 1px solid #eaf2f5;
+    margin: 0;
+    height: 1px;
+  }
+
+  .presentation-card {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu {
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease;
+  }
+
+  .logo {
+    z-index: 10;
+  }
+
+  .place {
+    display: none;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .support-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .toggle {
+    position: relative;
+    display: block;
+    z-index: 5;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+  }
+
+  .toggle span,
+.toggle::before,
+.toggle::after {
+    position: absolute;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    background-color: black;
+    transition: all 0.3s ease;
+  }
+
+  .toggle::before,
+.toggle::after {
+    content: "";
+  }
+
+  .toggle::after {
+    bottom: 0;
+  }
+
+  .toggle::before {
+    top: 0;
+  }
+
+  .toggle span {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .menu ul li a {
+    color: #fff;
+    padding: 40px auto;
+  }
+
+  .menu {
+    height: 0;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    overflow: auto;
+    margin-top: 50px;
+  }
+
+  .toggle, .logo {
+    position: fixed;
+    z-index: 10;
+  }
+
+  .logo {
+    left: 20px;
+  }
+
+  .toggle {
+    right: 20px;
+  }
+
+  .privacy {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu:before {
+    content: " ";
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    top: 0;
+    left: 0;
+  }
+
+  .menu.active {
+    height: 100vh;
+    transition: all 0.5s;
+  }
+
+  .toggle.active span {
+    transform: scale(0);
+  }
+
+  .toggle.active::before {
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+
+  .toggle.active::after {
+    transform: rotate(45deg) translate(-6px, -6px);
+  }
+
+  .menu.active ul {
+    opacity: 1;
+  }
+
+  .menu ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: all 0.5s;
+    opacity: 0;
+  }
+
+  .menu.active ul li {
+    width: 100vh;
+  }
+}
+.menu._active .menu__list {
+  display: block;
+}
+
+.menu__list li:hover {
+  background-color: #333;
+  color: #f1f1f1;
+}
+
+.menu__button {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: blue;
+  color: #fff;
+  border: none;
+}
+
+.menu__button:hover {
+  background-color: rgb(26, 26, 191);
+}
+
+.menu._active .menu__button span:first-child {
+  display: none;
+}
+
+.menu._active .menu__button span:last-child {
+  display: block;
+}
+
+.menu__button span:first-child {
+  display: block;
+}
+
+.menu__button span:last-child {
+  display: none;
+}
+
+.menu__list {
+  background-color: aqua;
+  padding: 15px;
+}
+
+.menu__list li:not(:last-child) {
+  margin: 0 0 15px 0;
+}
+
+.title2 {
+  font-size: 2.7rem;
+}
+
+/*# sourceMappingURL=style.css.map */
