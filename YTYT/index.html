@@ -1,52 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Learn programming</title>
-
-
-    </head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IT School</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
 <body >
 <!--Header-->
 <header>
     <div class="container">
-                <div class="header">
-                    <div class="navigation-bar">
-                        <div class="logo">
-                            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
-                        </div>
-                        <div class="menu">
-                            <ul>
-                                <li><a href="#">Чему вы научитесь</a></li>
-                                <li><a href="#">Процесс обучения</a></li>
-                                <li><a href="#">Стоимость</a></li>
-                                <li><a href="#">Контакты</a></li>
-
-                            </ul>
-                        </div>
-                        <div class="registration">
-                            <a href="#">Регистрация</a>
-                            <button class="btn"> Войти</button>
-                        </div>
-                    </div>
-                    <div class="main-header">
-                        <div class="main-header-text">
-                            <h1 class="title">Школа <span >{</span><i><b>программирования</b></i><span>}</span><br> для тех, кому нужны <br> реальные навыки,<br>
-                                а не просто сертификат</h1>
-                            <p>Пройдите тестирование, чтобы получить доступ<br> к бесплатным вводным урокам</p>
-                            <button class="btn">Пройти тестирование<a><i class="fa-solid fa-arrow-up-right"></i></a></button>
-                        </div>
-                        <div class="main-header__image">
-                            <img src="images/Layer%202.png" alt="main-header-image">
-                        </div>
-                    </div>
-
+        <div class="header">
+            <div class="navigation-bar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="logo"></a>
                 </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#learn">Чему вы научитесь</a></li>
+                        <li><a href="#presentation">Процесс обучения</a></li>
+                        <li><a href="#cost">Стоимость</a></li>
+                        <li><a href="#footer">Контакты</a></li>
+                        <li><a href="#">Регистрация</a></li>
+
+                    </ul>
+                </div>
+                <div class="login_div">
+                    <button class="btn place"> Войти</button>
+                </div>
+                <div class="toggle">
+                    <span></span>
+                </div>
+
+            </div>
+            <div class="main-header">
+                <div class="main-header-text">
+                    <h1 class="title">Школа <span >{</span><i><b>программирования</b></i><span>}</span><br> для тех, кому нужны <br> реальные навыки,<br>
+                        а не просто сертификат</h1>
+                    <p>Пройдите тестирование, чтобы получить доступ<br> к бесплатным вводным урокам</p>
+                    <button class="btn">Пройти тестирование<a><i class="fa-light fa-arrow-up-right"></i></a></button>
+                </div>
+                <div class="main-header__image">
+                    <img src="images/Layer%202.png" alt="main-header-image">
+                </div>
+            </div>
+
+        </div>
     </div>
 </header>
 <!--Header-->
 <!--Main info-->
-<main>
+<main  id="learn">
     <div class="container">
         <div>
             <h1 class="title">Какие технологии вы изучите:</h1>
@@ -57,9 +63,9 @@
             </div>
             <div class="main-info__text">
                 <p class="colorful" style="background-color: #5096FF">Язык программирования Python</p>
-                <p class="colorful" style="background-color:#FFB359 ">Сети</p> <br>
+                <p class="colorful" style="background-color:#FFB359 ">Сети</p> 
                 <p class="colorful" style="background-color:#FF6F50 ;">Базы данных</p>
-                <p class="colorful" style="background-color: #4BD071">Библиотеки Flask, Django</p><br>
+                <p class="colorful" style="background-color: #4BD071">Библиотеки Flask, Django</p>
                 <p class="colorful" style="background-color: #50C0FF">Отладка и тестирование</p>
                 <p class="colorful" style="background-color:#4B77B9 ">Docker</p>
                 <p class="colorful" style="background-color:  #AF93FF">Git</p> <br>
@@ -76,61 +82,61 @@
 <section class="about">
     <div class="container">
         <div class="about-title">
-            <h1 class="title">
+            <h1 class="title title2">
                 Обучение в YtYt – это<br> удобно и результативно
             </h1>
         </div>
         <div class="about-cards">
-               <div class="about-card">
-                   <img src="/images/practicelogo.png" alt="computer image">
-                   <h3>Огромное количество практики</h3>
-                   <p>Более 500 самостоятельных заданий и 20 полноценных больших проектов</p>
-               </div>
-                <div class="about-card">
-                    <img src="/images/methodlogo.png" alt="computer image">
-                    <h3>Современные методики обучения</h3>
-                    <p>Спиральное обучение:
-                        погружаемся в материал постепенно, виток за витком</p>
-                </div>
-                <div class="about-card">
-                    <img src="/images/understandlogo.png" alt="computer image">
-                    <h3>Простое и понятное изложение</h3>
-                    <p>Вместо заумных терминов – примеры из реального мира</p>
-                </div>
-               <div class="about-card">
-                   <img src="/images/calendarlogo.png" alt="computer image">
-                   <h3>Гибкий график занятий</h3>
-                   <p>Учитесь в любое время в удобном
-                       для вас темпе</p>
-               </div> <br>
-               <div class="about-card">
-                   <img src="/images/chatlogo.png" alt="computer image">
-                   <h3>Прямая связь с опытными программистами</h3>
-                   <p>Задавайте вопросы
-                       и отправляйте свой код на проверку</p>
-               </div>
-               <div class="about-card">
-                   <img src="/images/paylogo.png" alt="computer image">
-                   <h3>Оплата небольшими частями</h3>
-                   <p>Платите только за тот материал, который сейчас изучаете,
-                       а не за весь курс сразу</p>
-               </div>
-               <div class="about-card">
-                   <img src="/images/returncashlogo.png" alt="computer image">
-                   <h3>Быстрый и легкий возврат</h3>
-                   <p>Если передумаете учиться –
-                       вернем деньги за 3 рабочих дня</p>
-               </div>
+            <div class="about-card">
+                <img src="/images/practicelogo.png" alt="computer image">
+                <h3>Огромное количество практики</h3>
+                <p>Более 500 самостоятельных заданий и 20 полноценных больших проектов</p>
+            </div>
+            <div class="about-card">
+                <img src="/images/methodlogo.png" alt="computer image">
+                <h3>Современные методики обучения</h3>
+                <p>Спиральное обучение:
+                    погружаемся в материал постепенно, виток за витком</p>
+            </div>
+            <div class="about-card">
+                <img src="/images/understandlogo.png" alt="computer image">
+                <h3>Простое и понятное изложение</h3>
+                <p>Вместо заумных терминов – примеры из реального мира</p>
+            </div>
+            <div class="about-card">
+                <img src="/images/calendarlogo.png" alt="computer image">
+                <h3>Гибкий график занятий</h3>
+                <p>Учитесь в любое время в удобном
+                    для вас темпе</p>
+            </div> <br>
+            <div class="about-card">
+                <img src="/images/chatlogo.png" alt="computer image">
+                <h3>Прямая связь с опытными программистами</h3>
+                <p>Задавайте вопросы
+                    и отправляйте свой код на проверку</p>
+            </div>
+            <div class="about-card">
+                <img src="/images/paylogo.png" alt="computer image">
+                <h3>Оплата небольшими частями</h3>
+                <p>Платите только за тот материал, который сейчас изучаете,
+                    а не за весь курс сразу</p>
+            </div>
+            <div class="about-card">
+                <img src="/images/returncashlogo.png" alt="computer image">
+                <h3>Быстрый и легкий возврат</h3>
+                <p>Если передумаете учиться –
+                    вернем деньги за 3 рабочих дня</p>
+            </div>
 
 
-           </div>
+        </div>
     </div>
 </section>
 <!--About-->
 <!--Presentation-->
 <section >
     <div class="container">
-        <div class="presentation">
+        <div class="presentation" id="presentation">
             <div class="presentation-head">
                 <div class="presentation-title">
                     <h1 class="title">Как происходит обучение на YtYt?</h1>
@@ -138,8 +144,8 @@
                     </h5>
                 </div>
                 <div class="presentation-video">
-                    <video>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/WuEH265pUy4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <video width="580" height="400" autoplay muted controls>
+                        <source src="video/Neveroyatno_zhivopisnye_vidy_dikojj_prirody_severo-zapada_Tikhogo_okeana_320.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -161,20 +167,20 @@
                     <h1 class="big-number">03</h1>
                     <h3>Нет ограничений по времени</h3>
                     <p>Можно совмещать учёбу с работой
-                    и другими делами. Не нужно выпрашивать академический отпуск, если пришлось сделать перерыв.</p>
-            </div>
+                        и другими делами. Не нужно выпрашивать академический отпуск, если пришлось сделать перерыв.</p>
+                </div>
 
-        </div>
-        <div class="start-education">
-            <div class="button">
-                <button class="btn">Начать обучение</button>
             </div>
-            <div class="text">
-                <p>Попробуйте, первые уроки бесплатны, но нужно пройти тестирование</p>
-            </div>
+            <div class="start-education">
+                <div class="button">
+                    <button class="btn">Начать обучение</button>
+                </div>
+                <div class="text">
+                    <p>Попробуйте, первые уроки бесплатны, но нужно пройти тестирование</p>
+                </div>
 
 
-        </div>
+            </div>
         </div>
 
 
@@ -211,7 +217,7 @@
 </section>
 <!--Support -->
 <!--Price courses-->
-<section class="price-courses">
+<section class="price-courses" id="cost">
     <div class="container">
         <div class="price-courses__cards">
             <div class="price-course">
@@ -220,19 +226,19 @@
                 </div>
                 <div class="price-cards">
                     <div class="price-card">
-                            <img src="/images/shadow.png" alt="interfeys image">
-                            <p>Весь курс разбит на несколько блоков. Оплата поэтапная вы платите только за тот блок, который сейчас проходите.
-                            </p>
+                        <img src="/images/shadow.png" alt="interfeys image">
+                        <p>Весь курс разбит на несколько блоков. Оплата поэтапная вы платите только за тот блок, который сейчас проходите.
+                        </p>
                     </div>
                     <div class="price-card">
-                            <img src="/images/paylogo.png" alt="interfeys image">
-                            <p>Любой из блоков вы можете оплатить в рассрочку
-                            </p>
+                        <img src="/images/paylogo.png" alt="interfeys image">
+                        <p>Любой из блоков вы можете оплатить в рассрочку
+                        </p>
                     </div>
                     <div class="price-card">
-                            <img src="/images/returncashlogo.png" alt="interfeys image">
-                            <p>Если передумаете учиться, то возврат можно оформить в любой момент. Возвращаем деньги за 3 рабочих дня.
-                            </p>
+                        <img src="/images/returncashlogo.png" alt="interfeys image">
+                        <p>Если передумаете учиться, то возврат можно оформить в любой момент. Возвращаем деньги за 3 рабочих дня.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -281,7 +287,7 @@
                     <tr class="table-box">
                         <td>Итого</td>
                         <td>79 400</td>
-                        <td>3 месяца</td>
+                        <td>12 месяца</td>
                     </tr>
 
 
@@ -289,35 +295,43 @@
 
 
             </div>
-            <p>* если занятиям уделяется около 20 часов в неделю</p>
+            <p class="paddingText">* если занятиям уделяется около 20 часов в неделю</p>
             <div class="reminder">
                 <div class="reminder-img">
                     <img src="/images/speakerlogo.png" alt="reminder image">
                 </div>
                 <div class="reminder-text">
                     <p>Внимание! После оплаты курса, вы получаете доступ к первому блоку. Доступ к следующим блокам открывается по окончанию предыдущего.
-                    При необходимости вы можете повторить блок, если не смогли его пройти за отведенное время.
+                        При необходимости вы можете повторить блок, если не смогли его пройти за отведенное время.
 
                     </p>
                 </div>
                 <div class="reminder-button">
-                    <button class="button">Начать обучение</button>
+                    <button class="button">Начать обучение <i class="fa-solid fa-arrow-up-right"></i></button>
                 </div>
             </div>
-           
+
 
         </div>
     </div>
 </section>
 <!--Price courses-->
 <!--Footer-->
-<footer>
+<footer id="footer">
     <div class="container">
         <div class="footer">
             <div class="footer-logo">
                 <img src="/images/logo.png" alt="footer logo">
-                <p>Школа <br>программирования</p><br>
-                
+                <span>Школа <br>программирования</span><br>
+
+                <div class="icons">
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-vk"></i></a>
+                </div>
+
+
             </div>
             <div class="info-course">
                 <ul>
@@ -345,6 +359,9 @@
     </div>
 </footer>
 <!--Footer-->
+
+<script src="https://kit.fontawesome.com/d53551298a.js" crossorigin="anonymous"></script>
+<script src="yug.js"></script>
 
 
 

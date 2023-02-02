@@ -1,7 +1,14 @@
 $buttonColor: #F15525;
 $buttonColorHover: #38BFF2;
 $backgroundColor: #EAF2F5;
-
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Gilroy', sans-serif;
+}
+.toggle{
+  display: none;
+}
 .container{
   width: 68.23rem;
   margin: 0 auto;
@@ -33,17 +40,28 @@ $backgroundColor: #EAF2F5;
   }
 }
 body{
-  background:  url("/images/eclips1.png") no-repeat  top,url("/images/eclipps.png") center no-repeat,#FAFAFA;
+  background:url("../images/eclipps.png") center no-repeat,url("../images/eclips1.png") top no-repeat,#FAFAFA;
+  width: 100%;
 
+}
+body.lock{
+  overflow: hidden;
 }
 
 //Header
 
 
 .header{
+  margin-bottom: 0;
+  padding-top: 1rem;
+  
+  }
 
 
   .navigation-bar{
+    .logo{
+      padding-right: 2rem;
+    }
     display: flex;
     height: 3em;
     justify-content:space-between;
@@ -88,12 +106,14 @@ body{
 
   }
   .menu{
-    padding: 0.5em;
-    padding-right: 3rem;
-    margin-right: 15rem;
-  ;
+      flex: 1 1 auto;
+    }
+    
+    // padding: 0.5em;
+    // padding-right: 3rem;
+  
 
-  }
+  
   .main-header{
     display: flex;
     justify-content: space-between;
@@ -113,9 +133,7 @@ body{
       font-weight: normal;
       font-size: 0.8rem;
       line-height: 23px;
-      
-
-
+      padding: 1rem 0;
       color: #22253B;
     }
     span{
@@ -127,6 +145,10 @@ body{
       margin-top: 3rem;
     }
     .main-header__text{
+      a{
+        font-size: 1rem;
+        color: #ffffff;
+      }
       width: 50%;
       h1{
         @include title(#000);
@@ -137,7 +159,7 @@ body{
         font-size: 1.2em;
         font-family: 'Gilroy', sans-serif;
         color: #000;
-        margin-bottom: 1em;
+
       }
 
     }
@@ -147,14 +169,11 @@ body{
     }
   }
 
-}
+
 
 //Main info
 main{
   background: #ffffff;
-  .header{
-
-  }
   .title{
     @include title(#000);
     text-align: center;
@@ -162,13 +181,15 @@ main{
     font-weight: bolder;
     color: #22253B;
     font-size: 2.7rem;
+    margin-top: 0;
+    padding:1rem ;
   }
   .colorful{
     padding: 0.8rem 2rem;
     display: inline-block;
     background-color: $buttonColor;
     border: none;
-    margin: 0.5rem;
+    margin: 0.3rem;
     border-radius:44px ;
     color: #fff;
     font-family: "Gilroy SemiBold", Serif, serif;
@@ -183,10 +204,15 @@ main{
     border-radius: 3rem;
     .main-info__text{
       padding-top: 4rem;
+      width: 50%;
+      @media only screen and(max-width: 768px) {
+        width: 600px;
+        justify-content: center;
+        align-items: center;
+      }
     }
     span{
       font-family: 'Gilroy SemiBold', serif;
-      font-size: 20px;
       font-weight: 400;
       line-height: 25px;
       color: #22253B;
@@ -213,6 +239,7 @@ main{
   .about-title{
     @include title(#22253B);
     display: flex;
+    padding: 1rem 0;
     justify-content: center;
   }
   .about-cards{
@@ -259,14 +286,16 @@ main{
 
 .presentation{
   .presentation-video{
+    video{
+      margin-top: 2rem;
+    }
     height: 30rem;
     display: flex;
     justify-content: center;
     background: url("/images/💻  Macbook.png")  no-repeat center;
   }
   .start-education{
-    margin-left: 18rem;
-    margin-top: 2rem;
+    margin: 2rem auto;
     display: flex;
     width: 31.8rem;
     height: 5.47rem;
@@ -299,8 +328,14 @@ main{
       vertical-align: center;
 
     }
+    @media only screen and(width: 768px){
+      display: flex;
+      flex-direction: column;
+
+      
+    }
     width: 100%;
-    height: 22rem;
+    height: auto;
     background-color: #ffffff;
     border-radius: 40px;
     display: flex;
@@ -318,7 +353,13 @@ main{
 
     }
     .presentation-card{
-      width: 15rem;
+      @media only screen and(width: 768px){
+        width: 20rem;
+
+      }
+      width: 16rem;
+      margin-top: 3rem;
+      padding: 2rem 3rem;
       h3{
         font-family: 'Gilroy SemiBold', serif;
         font-style: normal;
@@ -326,6 +367,7 @@ main{
         font-size: 1.3rem;
         line-height: 30px;
         color: #22253B;
+        padding: 1.5rem 0;
       }
       p{
         font-family: 'Gilroy', serif;
@@ -345,7 +387,7 @@ main{
     justify-content: center;
     text-align: center;
     h5{
-      padding-left: 15rem;
+      margin: 1rem auto;
       display: flex;
       justify-content: center;
       width: 37rem;
@@ -430,7 +472,12 @@ main{
 
 .price-courses{
   .reminder{
-    .button{
+    button{
+      i{
+        color: #ffffff;
+        font-size: 1rem;
+        margin-left: 1rem;
+      }
       @include btn(18rem,4.2rem,1.3rem)
     }
     p{
@@ -442,35 +489,37 @@ main{
       color: #22253B;
     }
     .reminder-text{
-      width: 35rem;
+      width: 550px;
     }
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 12rem;
+    height: auto;
     border: none;
     border-radius: 30px;
     background:  #EAF2F5;
+    padding: 2rem 0;
   }
   .price-courses__table{
+    tr{
+      border-radius: 10px;
+    }
     background: #ffffff;
     border: none;
     border-radius:30px ;
 
     width: 100%;
     table{
-      border-spacing: 0;
-      tbody{
-        width: 100%;
-      }
+
+      border-collapse: collapse;
+      width: 100%;
     }
     .table-box{
-      width: 80%;
-
       display: flex;
       flex-flow: row nowrap;
       border-radius: 10px;
+      margin: 0 3rem;
     }
     .table-box:nth-child(even){
       background-color: #f2f2f2;
@@ -499,7 +548,27 @@ main{
 
 
   }
+  .paddingText{
+    padding: 1rem 0;
+  }
   .price-courses__cards{
+    .table-box{
+      display: flex;
+      justify-content: space-between;
+    }
+    th{
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Gilroy', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.3rem;
+      padding: 1rem 1.1rem 0.9rem;
+      background-color: #ffffff;
+      border-radius: 10px 10px 0 0;
+      border: none;
+    }
     h1{
       text-align: center;
     }
@@ -526,24 +595,41 @@ main{
     margin-bottom: 30px;
     grid-column-gap: 69px;
     column-gap: 69px;
+    @media only screen and (max-width: 768px) {
+      display: block;
+    }
+
+
+    }
   }
 
   .title{
     @include title( #22253B);
     font-weight: 600;
   }
+
+.price-course h1{
+  padding: 1rem 0;
 }
 // Footer
 
 .footer-logo{
-  // .social-media{
+  .icons{
+    margin-top: 2rem;
     a{
+      text-decoration: none;
       font-size: 2rem;
-      margin: 1rem;
-    }
-  // }
+      margin: 0.5rem;
+      color: #22253B;
+      &:hover{
+        color: $buttonColor;
+      }
 
-  p{
+    }
+  }
+
+
+  span{
     font-family: 'Gilroy', serif;
     font-style: normal;
     font-weight: 400;
@@ -551,14 +637,17 @@ main{
     line-height: 19px;
     color: #8E8E8E;
     margin-left: 1rem;
+    display: inline-block;
+    margin-top: 0.5rem;
   }
   img{
-    height: 1.3rem;
+    height: 1.9rem;
+
   }
   width: 35rem;
   justify-content: start;
   align-items: center;
-  display: flex;
+  //display: flex;
 }
 .privacy{
   a{
@@ -599,6 +688,7 @@ main{
   }
   .info-course{
     line-height: 2rem;
+    margin: 0 5rem;
   }
   display: flex;
   justify-content: space-evenly;
@@ -619,6 +709,256 @@ main{
       }
     }
   }
+}
+@media only screen and (max-width: 768px){
+  .container{
+    width: 600px;
+  }
+  .footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-logo{
+    width: auto;
+  }
+  .info-course{
+    margin: 1rem 0;
+  }
+  .price-card{
+    margin: 1rem;
+  }
+  .reminder{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .reminder-text{
+    margin: 1rem;
+  }
+  .main-header{
+    margin-top: 50px;
+  }
+  .toggle{
+    display: block;
+  }
+
+  
+  .header .navigation-bar li{
+    display: block;
+    margin: 10px 0;
+    font-size: 32px;
+    font-family: "Gilroy", sans-serif;
+  }
+  .header .navigation-bar a{
+    font-size: 32px;
+  }
+  .main-header{
+    display: block;
+    height: auto;
+
+  }
+  .main-header__text{
+    text-align: center;
+  }
+  .main-header ,.main-info{
+    display: flex;
+    flex-direction: column;
+  }
+  .main-info__image{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .presentation-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .vertical-line{
+    width: 80%;
+    border: 1px solid #eaf2f5;
+    margin: 0;
+    height: 1px;
+  }
+  .presentation-card{
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      justify-content: center;
+      align-items: center;
+  }
+  .menu{
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease;
+
+
+  }
+
+  .logo{
+    z-index: 10;
+  }
+  .place{
+    display: none;
+  }
+  .vertical-line{
+    display: none;
+  }
+
+  .support-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .toggle{
+    position: relative;
+    display: block;
+    z-index: 5;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+  }
+  .toggle span,
+  .toggle::before,
+  .toggle::after{
+    position: absolute;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    background-color: black;
+    transition: all 0.3s ease;
+  }
+  .toggle::before,
+  .toggle::after{
+    content: '';
+  }
+  .toggle::after{
+    bottom: 0;
+  }
+  .toggle::before{
+    top: 0;
+  }
+  .toggle span{
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .menu ul li a{
+    color: #fff;
+    padding: 40px auto;
+  }
+  .menu{
+    height: 0;
+    display: block;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    overflow: auto;
+    margin-top: 50px;
+  }
+  .toggle ,.logo{
+    position: fixed;
+    z-index: 10;
+  }
+  .logo{
+    left: 20px;
+  }
+    .toggle{
+        right: 20px;
+    }
+  .privacy{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu:before{
+    content: ' ';
+    position:fixed;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    top: 0;
+    left: 0;
+  }
+  .menu.active{
+    height: 100vh;
+    transition: all 0.5s;
+
+  }
+  .toggle.active span{
+    transform: scale(0);
+  }
+  .toggle.active::before{
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+  .toggle.active::after{
+    transform: rotate(45deg) translate(-6px, -6px);
+  }
+  .menu.active ul{
+    opacity: 1;
+  }
+  .menu ul{
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: all 0.5s;
+    opacity: 0;
+  }
+  .menu.active ul li{
+    width: 100vh;
+  }
+
+
+
+
+}
+.menu._active .menu__list{
+  display: block;
+}
+.menu__list li:hover{
+  background-color: #333;
+  color: #f1f1f1;
+}
+.menu__button{
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: blue;
+  color: #fff;
+  border: none;
+}
+.menu__button:hover{
+  background-color: rgb(26, 26, 191);
+}
+
+.menu._active .menu__button span:first-child{
+  display: none;
+}
+.menu._active .menu__button span:last-child{
+  display: block;
+}
+.menu__button span:first-child{
+  display: block;
+}
+.menu__button span:last-child{
+  display: none;
+}
+.menu__list{
+  background-color: aqua;
+  padding: 15px;
+}
+.menu__list li:not(:last-child){
+  margin: 0 0 15px 0;
+  
+
+}
+.title2{
+  font-size: 2.7rem;
 }
 
 
