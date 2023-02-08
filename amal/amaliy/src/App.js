@@ -1,11 +1,10 @@
 import React from 'react';
-import Counter from "./Counter/counter";
-import Modal from "./ModalWindow/Modal";
+import Quiz from "./quiz/Quiz";
 
 function App() {
     return (
         <div>
-            <Modal/>
+            <Quiz/>
         </div>
     );
 }
