@@ -1,0 +1,49 @@
+.App{
+    position: relative;
+    margin: 0 auto;
+    width: 600px;
+    height: 600px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.open-modal-button{
+/*   write beautiful style for button*/
+    width: 200px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    border: none;
+
+}
+.open-modal-button:hover{
+    background-color: #000;
+    color: #fff;
+}
+/*write style when clicked .open-modal-button*/
+.open-modal-button:active{
+    background-color: #000;
+    color: #fff;
+}
+
+.CloseButton{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    width: 80px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    border: none;
+}
