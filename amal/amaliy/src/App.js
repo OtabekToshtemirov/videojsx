@@ -1,10 +1,12 @@
 import React from 'react';
-import Quiz from "./quiz/Quiz";
+import Api from "./Api";
+import ApiHooks from "./hooks";
+
 
 function App() {
     return (
         <div>
-            <Quiz/>
+           <ApiHooks/>
         </div>
     );
 }

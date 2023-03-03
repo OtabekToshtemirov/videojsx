@@ -9,8 +9,6 @@ function Quiz() {
     const questions=Questions[step];
     const [point,setPoint]=useState(0);
 
-
-
     const  onClickVariant = (index) => {
         setStep(step+1);
         if (index===questions.correct){
@@ -23,7 +21,6 @@ function Quiz() {
             {
                 step!==Questions.length ? <Game step={step} question={questions} onClickVariant={onClickVariant} wiz={Questions}/> : <Result point = {point} wiz={Questions}/>
             }
-
 
         </div>
     );
