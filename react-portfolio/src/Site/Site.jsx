@@ -8,13 +8,13 @@ import Navigation from "./Navigation/Navigation.jsx";
 
 function Site() {
     return (
-        <>
+        <div className="App">
             <Navigation/>
-            <Header/>
-            <Works/>
+            {/*<Header/>*/}
+            {/*<Works/>*/}
             <Contacts/>
             <Footer/>
-        </>
+        </div>
     );
 }
 

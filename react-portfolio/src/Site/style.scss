@@ -62,6 +62,16 @@ body{
   line-height: 1.7;
   color: #666;
   background: #fff;
+  min-height: 100vh;
+}
+#root{
+  min-height: 100vh;
+
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container{

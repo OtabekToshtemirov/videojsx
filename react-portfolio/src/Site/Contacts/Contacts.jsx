@@ -1,26 +1,50 @@
 import React from 'react';
 import './contacts.css';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faMailReply} from "@fortawesome/free-solid-svg-icons";
+import {faPhone} from "@fortawesome/free-solid-svg-icons";
 
 function Contacts() {
     return (
         <>
-            <section className="contacts">
+
+
                 <div className="container">
+                    <section className="contacts">
                     <h1 className="contacts__title">
-                        Contact me
+                        Contacts
                     </h1>
-                    <div className="contacts__form">
-                        <form action="src/Site">
-                            <div className="form__group">
-                                <input type="text" placeholder="Name"/>
-                                    <input type="email" placeholder="Email"/>
-                                        <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-                                        <button type="submit">Send Message</button>
-                            </div>
-                        </form>
+                    <h4 className="contacts__subtitle">
+                        Get in touch
+                    </h4>
+                    <div className="contacts__phone">
+                        <div className="contacts__phone__icon">
+                            <FontAwesomeIcon icon={faPhone}></FontAwesomeIcon>
+                        </div>
+                        <div className="contacts__phone__number">
+                            <a href="tel:+998332280498">+998332280498</a>
+                        </div>
                     </div>
+                    <div className="contacts__email">
+                        <div className="contacts__email__icon">
+
+                            <FontAwesomeIcon icon={faMailReply}></FontAwesomeIcon>
+                        </div>
+                        <div className="contacts__email__address">
+                            <a href="mailto:shoraqorgon@gmail.com">Shoraqorgon@gmail.com</a>
+                        </div>
+                    </div>
+                    <div className="contacts__address">
+                        <div className="contacts__address__icon">
+                            <i className="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div className="contacts__address__text">
+                            <p>Uzbekistan, Tashkent</p>
+                        </div>
+                    </div>
+                    </section>
                 </div>
-            </section>
+
 
         </>
     );
