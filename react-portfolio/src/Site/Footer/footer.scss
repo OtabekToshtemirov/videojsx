@@ -1,0 +1,35 @@
+.footer{
+  background-color: #ffffff;
+  padding: 50px 0;
+}
+.footer__links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.footer__links a{
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 20px;
+  text-decoration: none;
+  &:hover{
+    color: #00754B;
+  }
+}
+.footer__socials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-media__icons{
+  color: #070707;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 20px;
+  text-decoration: none;
+  &:hover{
+    color: #00754B;
+  }
+}

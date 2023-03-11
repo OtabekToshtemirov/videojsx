@@ -1,0 +1,60 @@
+
+.contacts{
+  background-image: url("../images/Property 1=MacBook Pro 16_ - 1.png") ;
+  padding-bottom: 3rem;
+  .contacts__title{
+    font-family: 'Vollkorn',serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100px;
+    line-height: 178px;
+    color: #161313;
+    opacity: 0.05;
+    z-index: -1;
+  }
+  .contacts__form{
+    width: 100%;
+    border: 1px solid #565353;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;
+
+    input{
+      width: 100%;
+      height: 50px;
+      border: 1px solid #484242;
+      margin: 1rem 0;
+      padding: 0 1rem;
+      border-radius: 5px;
+    }
+    textarea{
+      width: 100%;
+      height: 200px;
+      border: 1px solid #484242;
+      margin: 1rem 0;
+      padding: 0 1rem;
+      border-radius: 5px;
+    }
+    button{
+      width: 100%;
+      height: 50px;
+      border: 1px solid #484242;
+      margin: 1rem 0;
+      padding: 0 1rem;
+      border-radius: 5px;
+      background-color: #000;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      &:hover{
+        background-color: #00754B;
+      }
+    }
+  }
+}
+
