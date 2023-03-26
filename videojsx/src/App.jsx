@@ -14,29 +14,29 @@ function App() {
     const handleChecked = (e) => {
         setChecked(e.target.checked)
         if (e.target.checked) {
-            setPrice(price + 220);
-            discount();
+            setPrice(price + 120);
+
         }
         else {
-            setPrice(price - 220)
+            setPrice(price - 120)
         }
 
     }
     const handleChecked2 = (e) => {
         setChecked2(e.target.checked)
         if (e.target.checked) {
-            setPrice(price + 180)
-            discount();
+            setPrice(price + 80)
+
         }
         else {
-            setPrice(price - 180)
+            setPrice(price - 80)
         }
     }
     const handleChecked3 = (e) => {
         setChecked3(e.target.checked)
         if (e.target.checked) {
             setPrice(price + 140)
-            discount();
+
         }
         else {
             setPrice(price - 140)
@@ -46,32 +46,32 @@ function App() {
     const handleChecked4 = (e) => {
         setChecked4(e.target.checked)
         if (e.target.checked) {
-            setPrice(price + 180);
-            discount();
-        }
-        else {
-            setPrice(price - 180)
-        }
-    }
-    const discount = () => {
-        if(checked && checked2 || checked && checked3 || checked && checked4 || checked2 && checked3 || checked2 && checked4 || checked3 && checked4){
-            setPrice(price - 50)
-            console.log("discount")
-
-            const notice = document.createElement("p");
-            notice.innerText = "You get 50$ discount for ordering 2 or more videos";
-            notice.classList.add("text-red-500", "font-semibold", "text-sm", "mt-2");
-            document.querySelector(".duration").appendChild(notice);
+            setPrice(price + 100);
 
         }
         else {
-            const notice = document.querySelector("p");
-            notice.remove();
+            setPrice(price - 100)
         }
-
-
-
     }
+    // const discount = () => {
+    //     if(checked && checked2 || checked && checked3 || checked && checked4 || checked2 && checked3 || checked2 && checked4 || checked3 && checked4){
+    //         setPrice(price - 50)
+    //         console.log("discount")
+    //
+    //         const notice = document.createElement("p");
+    //         notice.innerText = "You get 50$ discount for ordering 2 or more videos";
+    //         notice.classList.add("text-red-500", "font-semibold", "text-sm", "mt-2");
+    //         document.querySelector(".duration").appendChild(notice);
+    //
+    //     }
+    //     else {
+    //         const notice = document.querySelector("p");
+    //         notice.remove();
+    //     }
+    //
+    //
+    //
+    // }
     const handleCamera = (e) => {
         setCamera(e.target.value)
         if (e.target.value === "2") {
@@ -100,11 +100,12 @@ function App() {
     }
 
     const wedding = (e) => {
-        if (e.target.value === "wedding") {
-            setPrice(price + 50)
-        }
-        else {
-            setPrice(price - 50)
+        if (price) {
+            if (e.target.value === "bar") {
+                setPrice(price - 20)
+            } else {
+                setPrice(price + 20)
+            }
         }
     }
 
@@ -123,7 +124,7 @@ function App() {
 
                    Wedding
 
-                   <input type="radio" className="align-middle ml-1" id="wedding" name="price" value="wedding"/>
+                   <input type="radio" className="align-middle ml-1" id="wedding" name="price" value="wedding" checked/>
                </label>
                 <label htmlFor="maz" className="justify-start mx-2 align-baseline border rounded p-1.5 " onChange={wedding}>
 
@@ -170,7 +171,7 @@ function App() {
                             Full HD
 
                         <span className="text-xs">(1080p)</span>
-                        <input type="radio" className="align-middle ml-1" id="hd" name="quality" />
+                        <input type="radio" className="align-middle ml-1" id="hd" name="quality" checked  />
                     </label>
                     <label htmlFor="4k" className="justify-start align-baseline border rounded p-1.5 " onChange={handleResolution} >
 
