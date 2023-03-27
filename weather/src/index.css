@@ -1,0 +1,80 @@
+/* reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* set the font size */
+html {
+  font-size: 18px;
+}
+
+/* set the font family */
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+}
+
+
+/* set the color of the links */
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* set the color of the links when they are hovered */
+
+a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+/* set the color of the links when they are focused */
+
+a:focus {
+  color: #333;
+  text-decoration: underline;
+}
+/*--------------------------------------------------------*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+    flex-direction: column;
+  justify-content: center;
+    align-items: center;
+}
+
+.navigation {
+  width: 100%;
+  background-color: #06135c;
+  color: whitesmoke;
+
+}
+.search {
+  width: 100%;
+  background-color: #d4d8e5;
+  color: whitesmoke;
+  height: 80vh;
+}
+.search-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-bar input {
+  width: 80%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 1.6rem;
+  outline: none;
+  margin-top: 20px;
+}

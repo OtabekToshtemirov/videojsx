@@ -10,12 +10,14 @@ function App() {
     const [checked4, setChecked4] = useState(false);
     const [camera, setCamera] = useState(1);
     const [resolution, setResolution] = useState(0);
+    const [totalPrice, setTotalPrice] = useState(0);
+
+
 
     const handleChecked = (e) => {
         setChecked(e.target.checked)
         if (e.target.checked) {
             setPrice(price + 120);
-
         }
         else {
             setPrice(price - 120)
@@ -25,21 +27,21 @@ function App() {
     const handleChecked2 = (e) => {
         setChecked2(e.target.checked)
         if (e.target.checked) {
-            setPrice(price + 80)
+            setPrice(price + 100)
 
         }
         else {
-            setPrice(price - 80)
+            setPrice(price - 100)
         }
     }
     const handleChecked3 = (e) => {
         setChecked3(e.target.checked)
         if (e.target.checked) {
-            setPrice(price + 140)
+            setPrice(price + 80)
 
         }
         else {
-            setPrice(price - 140)
+            setPrice(price - 80)
         }
 
     }
@@ -53,61 +55,70 @@ function App() {
             setPrice(price - 100)
         }
     }
-    // const discount = () => {
-    //     if(checked && checked2 || checked && checked3 || checked && checked4 || checked2 && checked3 || checked2 && checked4 || checked3 && checked4){
-    //         setPrice(price - 50)
-    //         console.log("discount")
-    //
-    //         const notice = document.createElement("p");
-    //         notice.innerText = "You get 50$ discount for ordering 2 or more videos";
-    //         notice.classList.add("text-red-500", "font-semibold", "text-sm", "mt-2");
-    //         document.querySelector(".duration").appendChild(notice);
-    //
-    //     }
-    //     else {
-    //         const notice = document.querySelector("p");
-    //         notice.remove();
-    //     }
-    //
-    //
-    //
-    // }
-    const handleCamera = (e) => {
-        setCamera(e.target.value)
-        if (e.target.value === "2") {
-            setPrice(price + 60)
-        }
-        else if (e.target.value === "3") {
-            setPrice(price + 100)
-        }
-        else if (e.target.value === "4") {
-            setPrice(price + 130)
-        }
-        else {
-            setPrice(price)
-        }
-    }
+
     const handleResolution = (e) => {
         if (price){
             setResolution(e.target.value)
             if (e.target.value === "4k") {
-                setPrice(price + 30)
+                setPrice(price + 80)
             }
             else {
-                setPrice(price-30)
+                setPrice(price-80)
             }
         }
     }
 
     const wedding = (e) => {
         if (price) {
-            if (e.target.value === "bar") {
-                setPrice(price - 20)
-            } else {
+            if (e.target.value === "wedding") {
                 setPrice(price + 20)
             }
+            else {
+                setPrice(price - 20)
+            }
         }
+
     }
+
+
+
+    const handleCamera = (e) => {
+        setCamera(e.target.value)
+        let value1 = 0;
+        if (price){
+            if (e.target.value==="1") {
+                value1 = 0;
+            }
+            else if (e.target.value==="2") {
+                value1 = 140;
+            }
+            else if (e.target.value==="3") {
+                value1 = 380;
+            }
+            else if (e.target.value==="4") {
+                value1 = 620;
+            }
+        }
+        setTotalPrice(value1);
+    }
+
+    const discount = () => {
+        let totalPrices = price + totalPrice;
+        let discount = 0;
+        let counts= document.querySelectorAll('input[type="checkbox"]:checked').length;
+        if (counts === 2) {
+            discount = 16;
+        }
+        else if (counts === 3) {
+            discount = 25;
+        }
+        else if (counts === 4) {
+            discount = 30;
+        }
+        setTotalPrice(totalPrice - (totalPrice * discount / 100));
+    }
+
+
 
 
 
@@ -120,13 +131,13 @@ function App() {
           <form action=""  className="w-full h-auto border-2 rounded mt-3.5">
                 <div className="m-3 justify-start items-center border rounded p-2">
                 <span className="font-medium block my-2">Event type:</span>
-               <label htmlFor="wedding" className="active:bg-blue-900 justify-start align-baseline border rounded p-1.5  " onChange={wedding}>
+               <label htmlFor="wedding" className="bg-gray-300  justify-start align-baseline border rounded p-1.5  " onChange={wedding}>
 
                    Wedding
 
                    <input type="radio" className="align-middle ml-1" id="wedding" name="price" value="wedding" checked/>
                </label>
-                <label htmlFor="maz" className="justify-start mx-2 align-baseline border rounded p-1.5 " onChange={wedding}>
+                <label htmlFor="maz" className="bg-gray-300 justify-start mx-2 align-baseline border rounded p-1.5 " onChange={wedding}>
 
                     Bar Mitzvah
 
@@ -134,28 +145,27 @@ function App() {
                 </label>
             </div>
                 <div className="duration  m-3 ">
-                  <label htmlFor="checked" className="block p-2 text-lg font-semibold border " onChange={handleChecked}>
+                  <label htmlFor="checked" className="block p-2 text-lg font-semibold border hover:bg-gray-200" onChange={handleChecked}>
                         <input type="checkbox" id="checked" className="mr-2 h-4 w-4 "/>
 
                          Full film
 
                       <span className="text-xs">(1-3 hours)</span>
                   </label>
-                  <label htmlFor="checked2" className="block p-2 text-lg font-semibold border border-t-0" onChange={handleChecked2}>
+                  <label htmlFor="checked2" className="block p-2 text-lg font-semibold border border-t-0 hover:bg-gray-200" onChange={handleChecked2}>
                       <input type="checkbox" id="checked2" className="mr-2 h-4 w-4 "  />
-
                         Highlight
 
                       <span className="text-xs">(5-7 minutes)</span>
                   </label>
-                  <label htmlFor="checked3" className="block p-2 text-lg font-semibold border border-t-0" onChange={handleChecked3}>
+                  <label htmlFor="checked3" className="block p-2 text-lg font-semibold border border-t-0 hover:bg-gray-200" onChange={handleChecked3}>
                       <input type="checkbox" id="checked3" className="mr-2 h-4 w-4 "/>
 
                          Social film
 
                       <span className="text-xs">(1-2 minutes)</span>
                   </label>
-                  <label htmlFor="checked4" className="block p-2 text-lg font-semibold border border-t-0" onChange={handleChecked4}>
+                  <label htmlFor="checked4" className="block p-2 text-lg font-semibold border border-t-0 hover:bg-gray-200" onChange={handleChecked4}>
                       <input type="checkbox" id="checked4" className="mr-2 h-4 w-4 "/>
 
                         Feature film
@@ -171,7 +181,7 @@ function App() {
                             Full HD
 
                         <span className="text-xs">(1080p)</span>
-                        <input type="radio" className="align-middle ml-1" id="hd" name="quality" checked  />
+                        <input type="radio" className="align-middle ml-1" id="hd" name="quality"   />
                     </label>
                     <label htmlFor="4k" className="justify-start align-baseline border rounded p-1.5 " onChange={handleResolution} >
 
@@ -192,13 +202,12 @@ function App() {
                     </select>
                 </div>
                 <div className="total-price flex align-baseline justify-between m-3">
-                    <span className="font-bold text-lg block my-2 ">Total price: {price}$</span>
+                    <span className="font-bold text-lg block my-2 text-blue-600 text-2xl">Total: ${totalPrice+price}</span>
 
                     <div className="order-button">
                         <button className="bg-blue-900 text-white font-bold py-2 px-4 rounded mt-3 hover:bg-blue-600">
                             Order Now
                         </button>
-
                     </div>
                 </div>
 
