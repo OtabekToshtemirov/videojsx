@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import './App.css';
 
-import './App.css'
 
 function App() {
     const [price, setPrice] = useState(0);
@@ -11,6 +11,7 @@ function App() {
     const [camera, setCamera] = useState(1);
     const [resolution, setResolution] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
+    const [discountPrice, setDiscountPrice] = useState(0);
 
 
 
@@ -22,6 +23,7 @@ function App() {
         else {
             setPrice(price - 120)
         }
+        discount();
 
     }
     const handleChecked2 = (e) => {
@@ -33,6 +35,7 @@ function App() {
         else {
             setPrice(price - 100)
         }
+        discount();
     }
     const handleChecked3 = (e) => {
         setChecked3(e.target.checked)
@@ -43,6 +46,7 @@ function App() {
         else {
             setPrice(price - 80)
         }
+        discount();
 
     }
     const handleChecked4 = (e) => {
@@ -54,6 +58,7 @@ function App() {
         else {
             setPrice(price - 100)
         }
+        discount();
     }
 
     const handleResolution = (e) => {
@@ -100,23 +105,21 @@ function App() {
             }
         }
         setTotalPrice(value1);
+        discount();
     }
 
-    const discount = () => {
-        let totalPrices = price + totalPrice;
+    function discount ()  {
         let discount = 0;
         let counts= document.querySelectorAll('input[type="checkbox"]:checked').length;
-        if (counts === 2) {
-            discount = 16;
-        }
-        else if (counts === 3) {
+        console.log(counts);
+        if (counts >= 2) {
             discount = 25;
         }
-        else if (counts === 4) {
-            discount = 30;
-        }
-        setTotalPrice(totalPrice - (totalPrice * discount / 100));
+
+        setDiscountPrice((totalPrice + price) * (discount / 100));
+
     }
+
 
 
 
@@ -176,14 +179,14 @@ function App() {
               </div>
                 <div className="resolution m-3">
                   <span className="font-semibold block my-2 ">Video resolution:</span>
-                    <label htmlFor="hd" className="justify-start  align-baseline border rounded p-1.5 " onChange={handleResolution}>
+                    <label htmlFor="hd" className="bg-gray-300 justify-start  align-baseline border rounded p-1.5 " onChange={handleResolution}>
 
                             Full HD
 
                         <span className="text-xs">(1080p)</span>
                         <input type="radio" className="align-middle ml-1" id="hd" name="quality"   />
                     </label>
-                    <label htmlFor="4k" className="justify-start align-baseline border rounded p-1.5 " onChange={handleResolution} >
+                    <label htmlFor="4k" className="bg-gray-300 mx-2 justify-start align-baseline border rounded p-1.5 " onChange={handleResolution} >
 
                             4K
 
@@ -193,7 +196,11 @@ function App() {
 
                 </div>
                 <div className="cameras m-3 border p-2 rounded">
-                    <span className="font-semibold  my-2 ">How many cameras worked?</span>
+                    <span className="font-semibold  my-2 ">
+
+                        How many cameras worked?
+
+                    </span>
                     <select name="camera" id="" className="mx-3 border-2 rounded bg-white" onChange={handleCamera}>
                         <option value="1" >1 camera</option>
                         <option value="2" >2 camera</option>
@@ -201,13 +208,26 @@ function App() {
                         <option value="4" >4 camera</option>
                     </select>
                 </div>
-                <div className="total-price flex align-baseline justify-between m-3">
-                    <span className="font-bold text-lg block my-2 text-blue-600 text-2xl">Total: ${totalPrice+price}</span>
+                <div className="total-price flex flex-col align-baseline justify-between m-3">
+                        <span className="font-medium text-lg block my-2 text-red-600 text-2xl">
 
-                    <div className="order-button">
-                        <button className="bg-blue-900 text-white font-bold py-2 px-4 rounded mt-3 hover:bg-blue-600">
-                            Order Now
-                        </button>
+                            Price without discount: ${price+totalPrice}
+
+                        </span>
+                    <span className="font-medium text-lg block my-2 text-green-600 text-2xl">
+                        Discount: ${discountPrice}
+                    </span>
+                    <div className="flex justify-between">
+                        <span className="font-bold text-xl block my-2 text-blue-600 text-2xl">
+
+                            Total: ${totalPrice+price-discountPrice}
+
+                        </span>
+                        <div className="order-button">
+                            <button className="bg-blue-900 text-white font-bold py-2 px-4 rounded mt-3 hover:bg-blue-600">
+                                Order Now
+                            </button>
+                        </div>
                     </div>
                 </div>
 
