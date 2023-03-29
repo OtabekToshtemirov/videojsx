@@ -4,7 +4,7 @@ function Navigation() {
     return (
         <div className="navigation">
             <div className="container">
-                <h1 className="title">What is your plans for today?</h1>
+                <h1 className="title">This is a simple weather app that shows the weather in your city.</h1>
             </div>
         </div>
 

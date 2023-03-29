@@ -56,11 +56,15 @@ a:focus {
   color: whitesmoke;
 
 }
+.navigation h1 {
+  font-size: 2rem;
+  padding: 10px;
+}
 .search {
   width: 100%;
   background-color: #d4d8e5;
   color: whitesmoke;
-  height: 80vh;
+  height: 70vh;
 }
 .search-bar {
   width: 100%;
@@ -77,4 +81,96 @@ a:focus {
   font-size: 1.6rem;
   outline: none;
   margin-top: 20px;
+}
+.ripple {
+  text-decoration: none;
+  color: #fff;
+  width: 12px;
+  height: 12px;
+  background-color: #00E7FF;
+  margin: 0 auto;
+  border-radius: 100px;
+  -webkit-animation: ripple 0.7s linear infinite;
+  animation: ripple 0.7s linear infinite;
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 231, 255, 0.3), 0 0 0 10px rgba(0, 231, 255, 0.3), 0 0 0 30px rgba(0, 231, 255, 0.3), 0 0 0 60px rgba(0, 231, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(0, 231, 255, 0.3), 0 0 0 30px rgba(0, 231, 255, 0.3), 0 0 0 60px rgba(0, 231, 255, 0.3), 0 0 0 90px rgba(0, 231, 255, 0);
+  }
+}
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 231, 255, 0.3), 0 0 0 10px rgba(0, 231, 255, 0.3), 0 0 0 30px rgba(0, 231, 255, 0.3), 0 0 0 60px rgba(0, 231, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(0, 231, 255, 0.3), 0 0 0 30px rgba(0, 231, 255, 0.3), 0 0 0 60px rgba(0, 231, 255, 0.3), 0 0 0 90px rgba(0, 231, 255, 0);
+  }
+}
+.city{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border: #06135c 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #06135c;
+  color: whitesmoke;
+
+
+}
+.city-name span{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.myemail{
+  font-size: 1rem;
+}
+.footer {
+  width: 100%;
+  background-color: #06135c;
+  color: whitesmoke;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+.footer a:hover{
+    color: whitesmoke;
+    text-decoration: underline;
+}
+/*footer always on bottom*/
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+#root {
+  flex: 1;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .city {
+    width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  .city {
+    width: 100%;
+  }
 }

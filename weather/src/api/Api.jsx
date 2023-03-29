@@ -1,4 +1,5 @@
 import axios from 'axios';
+import React from 'react';
 
 
 
@@ -19,5 +20,3 @@ export const Api =  async (query) =>{
     });
      return data;
 }
-let response = await fetch('/article/promise-chaining/user.json');
-let user = await response.json();

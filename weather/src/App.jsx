@@ -1,5 +1,6 @@
 import Navigation from "./Navigation.jsx";
 import Application from "./Application.jsx";
+import Footer from "./Footer.jsx";
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
       <div>
           <Navigation/>
           <Application/>
+          <Footer/>
 
       </div>
 
